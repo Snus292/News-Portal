@@ -1,23 +1,22 @@
 <?php
-    $host = explode ('?', $_SERVER['REQUEST_URI'])[0];
-    $num =substr_count($host, '/');
-    $path = explode('/', $host)[$num];
+// Вычислить маршрут из адресной строки
+$host = explode('?', $_SERVER['REQUEST_URI'])[0];
+$num = substr_count($host, '/');
+$path = explode('/', $host)[$num];
 
+if ($path == '' or $path == 'index' or $path == 'index.php') {
+    $response = Controller::startSite();
+} elseif ($path == 'all') {
+    $response = Controller::allNews();
+} elseif ($path == 'category' and isset($_GET['id'])) {
+    $response = Controller::newsByCatID($_GET['id']);
+} elseif ($path == 'news' and isset($_GET['id'])) {
+    $response = Controller::newsByID($_GET['id']);
+} elseif ($path == 'insertcomment' and isset($_GET['comment'], $_GET['id'])) {
+    $response = Controller::insertComment($_GET['comment'], $_GET['id']);
+}
 
-    if($path == '' OR $path == 'index' OR $path =='index.php'){
-        $response = Controller::StartSite();
-    }
-
-    elseif($path =='all') {
-        $response = Controller::AllNews();
-    }
-    elseif($path =='category' and isset($_GET['id'])) {
-        $response = Controller::NewsByCatID($_GET['id']);
-    }
-    elseif($path =='news' and isset($_GET['id'])) {
-        $response = Controller::NewsByID($_GET['id']);
-    }
-
-    else{
-        $response = Controller::error404();
-    }
+// Error page
+else {
+    $response = Controller::error404();
+}
