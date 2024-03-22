@@ -40,34 +40,28 @@ class Controller
 
     public static function insertComment($c, $id)
     {
-        // $c - текст комментария, $id - номер новости, для которой добавлен комментарий
         Comments::insertComment($c, $id);
-        // self::newsByID($id);
         header('Location:news?id=' . $id . '#ctable');
     }
 
-    // Список комментариев:
     public static function comments($newsid)
     {
         $arr = Comments::getCommentByNewsID($newsid);
         ViewComments::commentsByNews($arr);
     }
 
-    // Количество комментариев к новости:
     public static function commentsCount($newsid)
     {
         $arr = Comments::getCommentsCountByNewsID($newsid);
         ViewComments::commentsCount($arr);
     }
 
-    // Ссылка - переход к списку комментариев
     public static function commentsCountWithAnchor($newsid)
     {
         $arr = Comments::getCommentsCountByNewsID($newsid);
         ViewComments::commentsCountWithAnchor($arr);
     }
 
-    // РЕГИСТРАЦИЯ
     public static function registerForm()
     {
         include_once('view/formRegister.php');
