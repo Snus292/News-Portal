@@ -62,11 +62,11 @@ class Controller
         ViewComments::commentsCountWithAnchor($arr);
     }
 //registration
-    public static function registerForm()
+    public  function registerForm()
     {
         include_once('view/formRegister.php');
     }
-    public static function registerUser()
+    public  function registerUser()
     {
         $result = Register::registerUser();
         
