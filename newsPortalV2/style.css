@@ -72,8 +72,12 @@ a {
   text-align: center;
 }
 .one ul {
-  background: #AB0000;
+  background: #93815E;
+  position: relative; /* Для абсолютного позиционирования псевдоэлемента */
 }
+
+
+
 .one ul a {
   color: white;
   font-weight: 600;
@@ -87,7 +91,7 @@ a {
 }
 .one .submenu {
   display: none;
-  background: #c40202;
+  background: #93815E;
 }
 .one ul li:hover .submenu {
   display: block;
@@ -104,14 +108,15 @@ a {
     width: 100%;
 }
 
-
-
-section{
-    padding: 2%;
-    display: flex;
-    align-content: center;
-    justify-content: center;
+section {
+  padding: 2%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 
 .search{
     margin-left: 250px;
@@ -121,51 +126,66 @@ section{
     width: auto;
 }
 
-.searchbar{
-    height: 25px;
-    margin-bottom: 3px;
-    width: 300px;
-    border-radius: 4px;
-    padding: 2px;
-    border: 0;
+.searchbar {
+  height: 25px;
+  margin-bottom: 3px;
+  width: 300px;
+  border-radius: 20px; /* Закругленные углы */
+  padding: 5px; /* Немного больше отступа */
+  border: 1px solid #ccc; /* Чуть более заметная рамка */
+  background-color: #f9f9f9; /* Светлый цвет фона */
 }
 
-table{
-    border: 1px solid black;
-    border-radius: 5px;
-    display: flex;
-    width: auto;
-    padding: 0;
-  font-size: 1.2rem;
+.searchbar:focus {
+  outline: none;
+  border-color: #4eb4e4; /* Изменение цвета рамки при фокусировке */
 }
 
-td{
-    border: 1px solid black;
-    margin: 0;
-    padding: 10px;
-    text-align: center;
+
+table {
+  border: 1px solid #ccc; /* Более заметная рамка */
+  border-radius: 5px;
+  overflow: hidden; /* Предотвратим выход содержимого за пределы таблицы */
+  width: 100%;
+  margin-top: 20px; /* Добавим немного отступа сверху */
 }
 
-tr{
-    padding: 0;
+th {
+  background-color: #4ebe4c;
+  padding: 10px;
+  margin: 0;
+  border: 1px solid rgb(255, 255, 255);
+  text-align: center;
+  color: white; /* Цвет текста белый */
 }
 
-th{
-    background-color: #4EBE4C;
-    padding: 20px;
-    margin: 0;
-    border: 1px solid black;
+td {
+  border: 1px solid #ccc;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
 }
 
-.btn{
-   background-color: #43E16F;
-   border-radius: 3px;
-   margin-left: 10px;
-   height: 30px;
-   border: 0;
-   color: white;
-   font-weight: 600;
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* Цвет фона четных строк */
 }
+
+
+.btn {
+  background-color: #43e16f;
+  border-radius: 3px;
+  margin-left: 10px;
+  height: 30px;
+  border: 0;
+  color: white;
+  font-weight: 600;
+  transition: background-color 0.3s ease; /* Плавное изменение цвета фона */
+}
+
+.btn:hover {
+  background-color: #32a45f; /* Цвет фона при наведении */
+}
+
 
 p{
     word-wrap: break-word;
@@ -196,4 +216,14 @@ h1{
 
 th{
     text-align: center;
+}
+.horizontal-news {
+  display: flex; /* Расположение элементов в строку */
+  flex-wrap: nowrap; /* Запрет переноса элементов на новую строку */
+  overflow-x: auto; /* Горизонтальный скролл при необходимости */
+}
+
+.horizontal-news > div {
+  flex: 0 0 auto; /* Элементы не растягиваются, сохраняют свою ширину */
+  margin-right: 50px; /* Дополнительный отступ между элементами */
 }
