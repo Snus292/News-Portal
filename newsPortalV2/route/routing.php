@@ -7,11 +7,11 @@ $path = explode('/', $host)[$num];
 if ($path == '' or $path == 'index' or $path == 'index.php') {
     $response = Controller::startSite();
 } elseif ($path == 'all') {
-    $response = Controller::allNews();
+    $response = Controller::allServices();
 } elseif ($path == 'category' and isset($_GET['id'])) {
-    $response = Controller::newsByCatID($_GET['id']);
+    $response = Controller::servicesByCatID($_GET['id']);
 } elseif ($path == 'news' and isset($_GET['id'])) {
-    $response = Controller::newsByID($_GET['id']);
+    $response = Controller::servicesByID($_GET['id']);
 } elseif ($path == 'insertcomment' and isset($_GET['comment'], $_GET['id'])) {
     $response = Controller::insertComment($_GET['comment'], $_GET['id']);
 }

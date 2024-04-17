@@ -5,7 +5,7 @@ class Controller
 
     public static function startSite()
     {
-        $arr = News::getLast3News();
+        $arr = Services::getLast3Services();
         include_once 'view/start.php';
     }
 
@@ -15,22 +15,22 @@ class Controller
         include_once 'view/category.php';
     }
 
-    public static function allNews()
+    public static function allServices()
     {
-        $arr = News::getAllNews();
-        include_once 'view/allnews.php';
+        $arr = Services::getAllServices();
+        include_once 'view/allservices.php';
     }
 
-    public static function newsByCatID($id)
+    public static function servicesByCatID($id)
     {
-        $arr = News::getNewsByCategoryID($id);
-        include_once 'view/catnews.php';
+        $arr = Services::getServicesByCategoryID($id);
+        include_once 'view/catservices.php';
     }
 
-    public static function newsByID($id)
+    public static function servicesByID($id)
     {
-        $n = News::getNewsByID($id);
-        include_once 'view/readnews.php';
+        $n = Services::getServicesByID($id);
+        include_once 'view/readservices.php';
     }
 
     public static function error404()
@@ -47,7 +47,7 @@ class Controller
     public static function comments($newsid)
     {
         $arr = Comments::getCommentByNewsID($newsid);
-        ViewComments::commentsByNews($arr);
+        ViewComments::commentsByServices($arr);
     }
 
     public static function commentsCount($newsid)

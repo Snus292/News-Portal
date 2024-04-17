@@ -1,10 +1,10 @@
 <?php
 ob_start();
 ?>
-<h1>TOP 3 NEWS</h1>
+<h1>TOP 3 services</h1>
 <br>
 <div class="horizontal-news">
-    <?php ViewNews::NewsByCategory($arr); ?>
+    <?php ViewServices::ServicesByCategory($arr); ?>
 </div>
 
 <?php

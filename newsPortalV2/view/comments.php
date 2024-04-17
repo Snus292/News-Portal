@@ -9,7 +9,7 @@ class ViewComments
             <input type="submit" value="Saada"></form>';
     }
 
-    public static function commentsByNews($arr)
+    public static function commentsByServices($arr)
     {
         if ($arr != null) {
             echo '<table id="ctable"><th>Kommentaar</th><th>Kuupäev</th>';
