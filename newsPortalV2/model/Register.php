@@ -27,13 +27,19 @@ class Register{
                 $date=Date("Y-m-d");
                 
                 $sql="INSERT INTO `users` (`id`,`username`,`email`,`password`,`status`,`registration_date`,`pass`) 
-                VALUES (NULL,`$name`,`$email`,`$passwordHash`,`user`,`$date`,`$password`)";
+                VALUES (NULL,'$name','$email','$passwordHash','user','$date','$password')";
                 $db = new Database();
                 $item = $db->executeRun($sql);
                     if($item)
                         $controll=array(0=>true);
                     else
                         $controll=array(0=>false,1=>"error");
+                        echo ($name);
+                        echo ($email);
+                        echo ($passwordHash);
+                        echo ($date);
+                        echo ($password);
+                        echo($sql);
             }
             else
             {
