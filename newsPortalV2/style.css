@@ -218,12 +218,19 @@ th{
     text-align: center;
 }
 .horizontal-news {
-  display: flex; /* Расположение элементов в строку */
-  flex-wrap: nowrap; /* Запрет переноса элементов на новую строку */
-  overflow-x: auto; /* Горизонтальный скролл при необходимости */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.horizontal-news > div {
-  flex: 0 0 auto; /* Элементы не растягиваются, сохраняют свою ширину */
-  margin-right: 50px; /* Дополнительный отступ между элементами */
+.news-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.news-item img {
+  display: block;
+  margin-bottom: 10px;
 }
