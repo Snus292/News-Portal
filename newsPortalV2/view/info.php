@@ -29,21 +29,18 @@
     </div>
 </nav>
 
+<section class="about-section">
+        <div class="container">
+            <h1>About Us</h1>
+            <p>Welcome to our beauty salon! We are dedicated to providing high-quality beauty services...</p>
+            <p>Our team of experienced professionals is passionate about making you look and feel your best...</p>
+            <p>Whether you're looking for a haircut, a manicure, or a relaxing massage, we've got you covered...</p>
+            <p>Visit us today and experience the difference!</p>
+        </div>
+    </section>
 
-
-        <section>
-            <div class='divBox'>
-                <?php
-                if(isset($content)){
-                    echo $content;
-                }
-                else{
-                    echo '<h1>Content is gone!</h1>';
-                }
-                ?>
-            </div>
-        </section>
-        <hr>
-        <p style="display:block; text-align:center;">SPTV21 2024 a. &copy;</p>
-    </body>
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+</body>
 </html>

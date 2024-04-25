@@ -133,7 +133,7 @@ section {
   border-radius: 20px; /* Закругленные углы */
   padding: 5px; /* Немного больше отступа */
   border: 1px solid #ccc; /* Чуть более заметная рамка */
-  background-color: #f9f9f9; /* Светлый цвет фона */
+  background-color: #fce49d; /* Светлый цвет фона */
 }
 
 .searchbar:focus {

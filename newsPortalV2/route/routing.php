@@ -10,7 +10,7 @@ if ($path == '' or $path == 'index' or $path == 'index.php') {
     $response = Controller::allServices();
 } elseif ($path == 'category' and isset($_GET['id'])) {
     $response = Controller::servicesByCatID($_GET['id']);
-} elseif ($path == 'news' and isset($_GET['id'])) {
+} elseif ($path == 'services' and isset($_GET['id'])) {
     $response = Controller::servicesByID($_GET['id']);
 } elseif ($path == 'insertcomment' and isset($_GET['comment'], $_GET['id'])) {
     $response = Controller::insertComment($_GET['comment'], $_GET['id']);
@@ -26,7 +26,10 @@ elseif ($path == "registerAnswer")
 //register user
     $response = Controller::registerUser();
 }
-
+elseif ($path == "testError")
+{ //form register
+    $response =Controller::getInfo();
+}
 // Error page
 else {
     $response = Controller::error404();

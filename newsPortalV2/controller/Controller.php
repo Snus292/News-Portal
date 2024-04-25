@@ -32,7 +32,10 @@ class Controller
         $n = Services::getServicesByID($id);
         include_once 'view/readservices.php';
     }
-
+    public static function getInfo()
+    {
+        include_once 'view/info.php';
+    }
     public static function error404()
     {
         include_once 'view/error404.php';
@@ -41,24 +44,24 @@ class Controller
     public static function insertComment($c, $id)
     {
         Comments::insertComment($c, $id);
-        header('Location:news?id=' . $id . '#ctable');
+        header('Location:services?id=' . $id . '#ctable');
     }
 
-    public static function comments($newsid)
+    public static function comments($servicesid)
     {
-        $arr = Comments::getCommentByNewsID($newsid);
+        $arr = Comments::getCommentByServicesID($servicesid);
         ViewComments::commentsByServices($arr);
     }
 
-    public static function commentsCount($newsid)
+    public static function commentsCount($servicesid)
     {
-        $arr = Comments::getCommentsCountByNewsID($newsid);
+        $arr = Comments::getCommentsCountByServicesID($servicesid);
         ViewComments::commentsCount($arr);
     }
 
-    public static function commentsCountWithAnchor($newsid)
+    public static function commentsCountWithAnchor($servicesid)
     {
-        $arr = Comments::getCommentsCountByNewsID($newsid);
+        $arr = Comments::getCommentsCountByServicesID($servicesid);
         ViewComments::commentsCountWithAnchor($arr);
     }
 
