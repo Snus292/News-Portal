@@ -1,0 +1,236 @@
+/* =============================================================================== */
+body {
+  margin:0;
+  font-family: Arial; 
+  }
+h2 {
+  font-family: monospace;
+  color: #606060;
+  
+}
+
+/* HEADER =================================================================== */
+
+/* NAVMENU =================================================== */
+nav {
+  width: 100%;
+  margin: auto;
+  padding: auto;
+}
+ul {
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+}
+.topmenu > li {
+  display: inline-block;
+  margin-right: auto;
+  position: relative;
+  width: 10%;
+  padding: auto;
+  text-align: center;
+}
+.topmenu > li:last-child {
+  margin-right: 0;
+}
+
+.divBox{
+  width: 85%;
+  margin-left: 20px;
+}
+
+.pull-right{
+  padding:20px;
+  float: right;
+}
+
+/*img {
+    min-width: 30%;
+}*/
+
+a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  outline: none;
+ 
+  transition: .5s linear;
+  
+}
+.fa {
+  font-family: "FontAwesome";
+  color: inherit;
+  padding-left: 10px;
+}
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: auto;
+  z-index: 10;
+  transition: 0.5s ease-in-out;
+  text-align: center;
+}
+.one ul {
+  background: #93815E;
+  position: relative; /* Для абсолютного позиционирования псевдоэлемента */
+}
+
+
+
+.one ul a {
+  color: white;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.one ul a:hover {
+  color: gold;
+  transition: 0.3s;
+  text-decoration: underline;
+}
+.one .submenu {
+  display: none;
+  background: #93815E;
+}
+.one ul li:hover .submenu {
+  display: block;
+}
+.logo{
+  width: auto;
+  color: white;
+  font-size: 1.2em;
+        margin-left: 15%;
+}
+
+.submenuunit{
+    height: auto;
+    width: 100%;
+}
+
+section {
+  padding: 2%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.search{
+    margin-left: 250px;
+    padding: 0;
+    display: flex;
+    flex-flow: row;
+    width: auto;
+}
+
+.searchbar {
+  height: 25px;
+  margin-bottom: 3px;
+  width: 300px;
+  border-radius: 20px; /* Закругленные углы */
+  padding: 5px; /* Немного больше отступа */
+  border: 1px solid #ccc; /* Чуть более заметная рамка */
+  background-color: #fce49d; /* Светлый цвет фона */
+}
+
+.searchbar:focus {
+  outline: none;
+  border-color: #4eb4e4; /* Изменение цвета рамки при фокусировке */
+}
+
+
+table {
+  border: 1px solid #ccc; /* Более заметная рамка */
+  border-radius: 5px;
+  overflow: hidden; /* Предотвратим выход содержимого за пределы таблицы */
+  width: 100%;
+  margin-top: 20px; /* Добавим немного отступа сверху */
+}
+
+th {
+  background-color: #4ebe4c;
+  padding: 10px;
+  margin: 0;
+  border: 1px solid rgb(255, 255, 255);
+  text-align: center;
+  color: white; /* Цвет текста белый */
+}
+
+td {
+  border: 1px solid #ccc;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* Цвет фона четных строк */
+}
+
+
+.btn {
+  background-color: #43e16f;
+  border-radius: 3px;
+  margin-left: 10px;
+  height: 30px;
+  border: 0;
+  color: white;
+  font-weight: 600;
+  transition: background-color 0.3s ease; /* Плавное изменение цвета фона */
+}
+
+.btn:hover {
+  background-color: #32a45f; /* Цвет фона при наведении */
+}
+
+
+p{
+    word-wrap: break-word;
+    display: flex;
+  font-size: 1.2rem;
+}
+
+h1{
+    width: auto;
+    display: inline-block;
+}
+
+.courselink{
+    color: black;
+    font-weight: 550;
+}
+
+.courselink:hover{
+    color: blue;
+    text-decoration: underline;
+}
+
+.control{
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+th{
+    text-align: center;
+}
+.horizontal-news {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.news-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.news-item img {
+  display: block;
+  margin-bottom: 10px;
+}
