@@ -22,7 +22,9 @@
         <li><a href="testError">Info</a></li>
         <li><a href="./">Stardileht</a></li>
         <li><a href="registerForm">Register</a></li>
-        
+        <div style="text-align: right;">
+    <a href="/newsPortalV26/newsPortalChaina/"><img src="view/chflag.png" alt="Flag Image"width="50" height="50"></a>
+</div>
     </ul>
     <div class="navbar">
         <img src="view/korner.png" width="100%" height="140" alt="Menu Image">
@@ -44,6 +46,7 @@
             </div>
         </section>
         <hr>
+        
         <p style="display:block; text-align:center;">SPTV21 2024 a. &copy;</p>
     </body>
 </html>
